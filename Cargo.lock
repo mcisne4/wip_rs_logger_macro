@@ -38,6 +38,7 @@ dependencies = [
 name = "rs_logger_errors"
 version = "0.1.0"
 dependencies = [
+ "quote",
  "venial",
 ]
 
