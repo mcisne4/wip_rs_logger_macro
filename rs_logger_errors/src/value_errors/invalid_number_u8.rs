@@ -4,7 +4,7 @@ pub fn invalid_number_u8<Tokens: quote::ToTokens>(
     tokens: Tokens,
     is_tuple_value: bool,
 ) -> venial::Error {
-    let mut msg = String::from("The 'mod_idx' attribute should be an integer between 0 and 255");
+    let mut msg = String::from("The 'module_idx' attribute should be an integer between 0 and 255");
 
     msg += example_code::EXAMPLE;
 

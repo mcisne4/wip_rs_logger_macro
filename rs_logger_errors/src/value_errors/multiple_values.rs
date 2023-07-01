@@ -14,7 +14,7 @@ pub fn multiple_values<Tokens: quote::ToTokens>(
 
     msg += match attr {
         Attrs::CrateIdx => "a single integer value to be passed",
-        Attrs::ModIdx => "a single integer value to be passed",
+        Attrs::ModuleIdx => "a single integer value to be passed",
         _ => "a single string value to be passed",
     };
 
@@ -23,16 +23,16 @@ pub fn multiple_values<Tokens: quote::ToTokens>(
     msg += match is_tuple_value {
         true => match attr {
             Attrs::CrateIdx => example_code::CRATE_IDX_TPL,
-            Attrs::ModIdx => example_code::MOD_IDX_TPL,
-            Attrs::Location => example_code::LOCATION_TPL,
+            Attrs::ModuleIdx => example_code::MOD_IDX_TPL,
+            Attrs::ModulePath => example_code::LOCATION_TPL,
             Attrs::InfoMsg => example_code::INFO_MSG_TPL,
             Attrs::WarnMsg => example_code::WARN_MSG_TPL,
             Attrs::ErrorMsg => example_code::ERROR_MSG_TPL,
         },
         false => match attr {
             Attrs::CrateIdx => example_code::CRATE_IDX_TPL,
-            Attrs::ModIdx => example_code::MOD_IDX_TPL,
-            Attrs::Location => example_code::LOCATION_TPL,
+            Attrs::ModuleIdx => example_code::MOD_IDX_TPL,
+            Attrs::ModulePath => example_code::LOCATION_TPL,
             Attrs::InfoMsg => example_code::INFO_MSG_TPL,
             Attrs::WarnMsg => example_code::WARN_MSG_TPL,
             Attrs::ErrorMsg => example_code::ERROR_MSG_TPL,

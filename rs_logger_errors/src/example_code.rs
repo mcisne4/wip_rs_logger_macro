@@ -10,11 +10,11 @@ pub const VARIANT3: &str = "  Variant3,\n";
 pub const CRATE_IDX_EQ: &str = "#[crate_idx = 15]\n";
 pub const CRATE_IDX_TPL: &str = "#[crate_idx(15)]\n";
 
-pub const MOD_IDX_EQ: &str = "#[mod_idx = 249]\n";
-pub const MOD_IDX_TPL: &str = "#[mod_idx(249)]\n";
+pub const MOD_IDX_EQ: &str = "#[module_idx = 249]\n";
+pub const MOD_IDX_TPL: &str = "#[module_idx(249)]\n";
 
-pub const LOCATION_EQ: &str = "#[location = \"rs_logs::example::path\"]\n";
-pub const LOCATION_TPL: &str = "#[location(\"rs_logs::example::path\")]\n";
+pub const LOCATION_EQ: &str = "#[module_path = \"rs_logs::example::path\"]\n";
+pub const LOCATION_TPL: &str = "#[module_path(\"rs_logs::example::path\")]\n";
 
 pub const INFO_MSG_EQ: &str = "#[info_msg = \"This is an info message\"]\n";
 pub const INFO_MSG_TPL: &str = "#[info_msg(\"This is an info message\")]\n";
