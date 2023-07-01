@@ -1,0 +1,7 @@
+[workspace]
+members = [
+  "rs_dev",
+  "rs_logger",
+  "rs_logger_errors",
+  "rs_logger_macro",
+]
