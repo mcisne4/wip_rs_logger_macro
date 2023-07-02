@@ -53,6 +53,10 @@ expand-logger-macro:
 expand-logger-errors:
   @cd rs_logger_errors && cargo expand
 
+# Expand: Dev Logger
+expand-dev-logger:
+  @cd rs_dev && cargo expand logger
+
 # =========================== #
 # === MODULE TREE SCRIPTS === #
 # =========================== #
