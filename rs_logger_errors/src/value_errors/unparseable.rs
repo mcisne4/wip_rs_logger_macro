@@ -1,6 +1,7 @@
 use crate::attributes::Attrs;
 use crate::example_code;
 
+/// Error for when an attribute cannot be parsed
 pub fn unparseable<Tokens: quote::ToTokens>(
     tokens: Tokens,
     attr: Attrs,

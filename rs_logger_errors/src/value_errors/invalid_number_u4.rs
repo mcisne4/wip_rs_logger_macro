@@ -1,5 +1,6 @@
 use crate::example_code;
 
+/// Error for the crate_idx attribute if the value is not between 0 and 15
 pub fn invalid_number_u4<Tokens: quote::ToTokens>(
     tokens: Tokens,
     is_tuple_value: bool,

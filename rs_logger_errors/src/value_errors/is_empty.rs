@@ -1,6 +1,7 @@
 use crate::attributes::Attrs;
 use crate::example_code;
 
+/// Error for attribute with no value
 pub fn is_empty<Tokens: quote::ToTokens>(
     tokens: Tokens,
     attr: Attrs,

@@ -1,6 +1,7 @@
 use crate::attributes::Attrs;
 use crate::example_code;
 
+/// Error for when multiple values are found for an attribute
 pub fn multiple_values<Tokens: quote::ToTokens>(
     tokens: Tokens,
     attr: Attrs,

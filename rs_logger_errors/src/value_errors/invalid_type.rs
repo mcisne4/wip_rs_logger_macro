@@ -1,6 +1,7 @@
 use crate::attributes::Attrs;
 use crate::example_code;
 
+/// Error for attribute value being of the wrong type
 pub fn invalid_type<Tokens: quote::ToTokens>(
     tokens: Tokens,
     attr: Attrs,

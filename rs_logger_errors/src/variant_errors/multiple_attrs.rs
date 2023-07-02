@@ -1,3 +1,4 @@
+/// Error for more than one attribute provided for a variant
 pub fn multiple_attrs<Tokens: quote::ToTokens>(tokens: Tokens) -> venial::Error {
     venial::Error::new_at_tokens(
         tokens,

@@ -1,6 +1,7 @@
 use crate::attributes::EnumAttrs;
 use crate::example_code;
 
+/// Error for missing enum declaration attributes
 pub fn missing_attr<Tokens: quote::ToTokens>(tokens: Tokens, attr: EnumAttrs) -> venial::Error {
     let mut msg = format!(
         "The '{}' attribute is required in the enum declarations",

@@ -1,5 +1,6 @@
 use crate::example_code;
 
+/// Error for the module_idx attribute if the value is not between 0 and 255
 pub fn invalid_number_u8<Tokens: quote::ToTokens>(
     tokens: Tokens,
     is_tuple_value: bool,

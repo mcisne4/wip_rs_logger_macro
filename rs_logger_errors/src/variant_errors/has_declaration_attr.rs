@@ -1,5 +1,6 @@
 use crate::attributes::EnumAttrs;
 
+/// Error for when a declaration attribute is used on a variant
 pub fn has_declaration_attr<Tokens: quote::ToTokens>(
     tokens: Tokens,
     attr: EnumAttrs,

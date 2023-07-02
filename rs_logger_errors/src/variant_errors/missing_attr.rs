@@ -1,5 +1,6 @@
 use crate::example_code;
 
+/// Error for missing attributes on enum variants
 pub fn missing_attr<Tokens: quote::ToTokens>(tokens: Tokens) -> venial::Error {
     let mut msg = concat!(
         "The 'Logger' implementation requires each enum variant to have ",
