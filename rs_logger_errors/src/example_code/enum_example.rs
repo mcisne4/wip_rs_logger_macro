@@ -8,7 +8,7 @@ pub fn enum_example() -> String {
     msg += MOD_IDX_EQ;
     msg += LOCATION_EQ;
     msg += ENUM_DEC;
-    msg += "...\n}";
+    msg += "...\n}\n";
 
     msg
 }

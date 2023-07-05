@@ -14,7 +14,7 @@ pub fn variant_example() -> String {
     msg += "  ";
     msg += ERROR_MSG_EQ;
     msg += VARIANT3;
-    msg += "}\n";
+    msg += "}\n\n";
 
     msg
 }

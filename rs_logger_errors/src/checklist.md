@@ -4,10 +4,11 @@
 
 | Used | Error                      |
 | ---- | -------------------------- |
-| [ ]  | `has_variant_attr`         |
+| [x]  | `has_variant_attr`         |
 | [x]  | `invalid_declaration_type` |
 | [ ]  | `missing_attr`             |
 | [ ]  | `multiple_attr`            |
+| [x]  | `no_attrs`                 |
 
 ## variant_errors
 
@@ -17,7 +18,7 @@
 | [ ]  | `missing_attr`         |
 | [ ]  | `multiple_attrs`       |
 
-## value_errors
+## value_errors: enum
 
 | Used | Error               |
 | ---- | ------------------- |
@@ -27,3 +28,12 @@
 | [ ]  | `is_empty`          |
 | [ ]  | `multiple_values`   |
 | [ ]  | `unparseable`       |
+
+## value_errors: variants
+
+| Used | Error             |
+| ---- | ----------------- |
+| [ ]  | `invalid_type`    |
+| [ ]  | `is_empty`        |
+| [ ]  | `multiple_values` |
+| [ ]  | `unparseable`     |

@@ -9,7 +9,6 @@ pub fn no_attrs<Tokens: quote::ToTokens>(tokens: Tokens) -> venial::Error {
     )
     .to_owned();
 
-    msg += example_code::EXAMPLE;
     msg += example_code::enum_example().as_str();
 
     venial::Error::new_at_tokens(tokens, msg)

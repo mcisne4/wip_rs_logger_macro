@@ -1,4 +1,5 @@
 mod enum_decl;
+mod parse_enum;
 
 use rs_logger_errors::LoggerResult;
 
@@ -9,7 +10,10 @@ pub fn logger(input: proc_macro::TokenStream) -> LoggerResult<proc_macro2::Token
     let declaration = venial::parse_declaration(input)?;
 
     // --- Validate Enum Declaration --- //
-    let _enum_data = enum_decl::validate_enum_decl(&declaration)?;
+    let enum_data = enum_decl::validate_enum_decl(&declaration)?;
+
+    // --- Parse Enum Data --- //
+    let parsed_data = parse_enum::parse_enum_data(&enum_data)?;
 
     // --- To Token Stream --- //
     Ok(quote::quote! {
