@@ -25,7 +25,7 @@ pub fn multiple_values<Tokens: quote::ToTokens>(
         true => match attr {
             Attrs::CrateIdx => example_code::CRATE_IDX_TPL,
             Attrs::ModuleIdx => example_code::MOD_IDX_TPL,
-            Attrs::ModulePath => example_code::LOCATION_TPL,
+            Attrs::LogPath => example_code::LOCATION_TPL,
             Attrs::InfoMsg => example_code::INFO_MSG_TPL,
             Attrs::WarnMsg => example_code::WARN_MSG_TPL,
             Attrs::ErrorMsg => example_code::ERROR_MSG_TPL,
@@ -33,7 +33,7 @@ pub fn multiple_values<Tokens: quote::ToTokens>(
         false => match attr {
             Attrs::CrateIdx => example_code::CRATE_IDX_TPL,
             Attrs::ModuleIdx => example_code::MOD_IDX_TPL,
-            Attrs::ModulePath => example_code::LOCATION_TPL,
+            Attrs::LogPath => example_code::LOCATION_TPL,
             Attrs::InfoMsg => example_code::INFO_MSG_TPL,
             Attrs::WarnMsg => example_code::WARN_MSG_TPL,
             Attrs::ErrorMsg => example_code::ERROR_MSG_TPL,

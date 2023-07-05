@@ -5,7 +5,7 @@ pub fn no_attrs<Tokens: quote::ToTokens>(tokens: Tokens) -> venial::Error {
     let mut msg = concat!(
         "No attributes were provided for the enum declaration. ",
         "The 'Logger' implementation requires the enum declaration to have ",
-        "a 'crate_idx' attribute, a 'module_idx' attribute, and a 'module_path' attribute"
+        "a 'crate_idx' attribute, a 'module_idx' attribute, and a 'log_path' attribute"
     )
     .to_owned();
 

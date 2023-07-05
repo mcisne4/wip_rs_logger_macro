@@ -35,7 +35,7 @@ use rs_logger::Logger;
 #[derive(Logger)]
 #[crate_idx()]
 #[module_idx()]
-#[module_path]
+#[log_path]
 pub enum MyLogger {
     Item1,
     Item2,
