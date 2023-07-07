@@ -1,11 +1,14 @@
-use rs_logger_errors::attributes::VariantAttrs;
+use rs_logger_errors::attributes::{EnumAttrs, VariantAttrs};
 use rs_logger_errors::declaration_errors;
 use rs_logger_errors::LoggerResult;
 
-pub fn get_attr_name(attr: &venial::Attribute) -> LoggerResult<String> {
+pub fn which_enum_attr(attr: &venial::Attribute) -> LoggerResult<Option<EnumAttrs>> {
     let attr_name = attr.path[0].to_string();
 
     match attr_name.as_str() {
+        "crate_idx" => Ok(Some(EnumAttrs::CrateIdx)),
+        "module_idx" => Ok(Some(EnumAttrs::ModuleIdx)),
+        "log_path" => Ok(Some(EnumAttrs::LogPath)),
         "info_msg" => {
             return Err(declaration_errors::has_variant_attr(
                 attr,
@@ -24,6 +27,6 @@ pub fn get_attr_name(attr: &venial::Attribute) -> LoggerResult<String> {
                 VariantAttrs::ErrorMsg,
             ))
         }
-        _ => Ok(attr_name),
+        _ => Ok(None),
     }
 }

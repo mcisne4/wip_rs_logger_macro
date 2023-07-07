@@ -11,6 +11,13 @@ impl EnumAttrs {
             Self::LogPath => "log_path",
         }
     }
+    pub fn as_attrs(&self) -> Attrs {
+        match self {
+            Self::CrateIdx => Attrs::CrateIdx,
+            Self::ModuleIdx => Attrs::ModuleIdx,
+            Self::LogPath => Attrs::LogPath,
+        }
+    }
 }
 
 pub enum VariantAttrs {
@@ -24,6 +31,13 @@ impl VariantAttrs {
             Self::InfoMsg => "info_msg",
             Self::WarnMsg => "warn_msg",
             Self::ErrorMsg => "error_msg",
+        }
+    }
+    pub fn as_attrs(&self) -> Attrs {
+        match self {
+            Self::InfoMsg => Attrs::InfoMsg,
+            Self::WarnMsg => Attrs::WarnMsg,
+            Self::ErrorMsg => Attrs::ErrorMsg,
         }
     }
 }

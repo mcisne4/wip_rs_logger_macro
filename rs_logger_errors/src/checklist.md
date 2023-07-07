@@ -6,8 +6,8 @@
 | ---- | -------------------------- |
 | [x]  | `has_variant_attr`         |
 | [x]  | `invalid_declaration_type` |
-| [ ]  | `missing_attr`             |
-| [ ]  | `multiple_attr`            |
+| [x]  | `missing_attr`             |
+| [x]  | `multiple_attr`            |
 | [x]  | `no_attrs`                 |
 
 ## variant_errors
@@ -22,12 +22,12 @@
 
 | Used | Error               |
 | ---- | ------------------- |
-| [ ]  | `invalid_number_u4` |
-| [ ]  | `invalid_number_u8` |
-| [ ]  | `invalid_type`      |
-| [ ]  | `is_empty`          |
-| [ ]  | `multiple_values`   |
-| [ ]  | `unparseable`       |
+| [x]  | `invalid_number_u4` |
+| [x]  | `invalid_number_u8` |
+| [x]  | `invalid_type`      |
+| [x]  | `is_empty`          |
+| [x]  | `multiple_values`   |
+| [x]  | `unparseable`       |
 
 ## value_errors: variants
 

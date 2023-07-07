@@ -8,7 +8,7 @@ pub fn missing_attr<Tokens: quote::ToTokens>(tokens: Tokens, attr: EnumAttrs) ->
         attr.as_str(),
     );
 
-    msg += example_code::EXAMPLE;
+    // msg += example_code::EXAMPLE;
     msg += example_code::enum_example().as_str();
 
     venial::Error::new_at_tokens(tokens, msg)

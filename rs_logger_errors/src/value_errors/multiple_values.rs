@@ -14,8 +14,8 @@ pub fn multiple_values<Tokens: quote::ToTokens>(
     );
 
     msg += match attr {
-        Attrs::CrateIdx => "a single integer value to be passed",
-        Attrs::ModuleIdx => "a single integer value to be passed",
+        Attrs::CrateIdx => "a single integer value between 0 and 15 to be passed",
+        Attrs::ModuleIdx => "a single integer value between 0 and 255 to be passed",
         _ => "a single string value to be passed",
     };
 

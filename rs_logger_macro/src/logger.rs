@@ -1,4 +1,5 @@
 mod enum_decl;
+mod parse_attr;
 mod parse_enum;
 
 use rs_logger_errors::LoggerResult;

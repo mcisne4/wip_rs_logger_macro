@@ -3,6 +3,15 @@
 version = 3
 
 [[package]]
+name = "litrs"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4f17c3668f3cc1132437cdadc93dab05e52d592f06948d3f64828430c36e4a70"
+dependencies = [
+ "proc-macro2",
+]
+
+[[package]]
 name = "proc-macro2"
 version = "1.0.63"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -46,6 +55,7 @@ dependencies = [
 name = "rs_logger_macro"
 version = "0.1.0"
 dependencies = [
+ "litrs",
  "proc-macro2",
  "quote",
  "rs_logger_errors",
