@@ -123,34 +123,66 @@ use rs_logger::Logger;
 // }
 
 // === Enum: Proper Values (EQUAL) === //
+// #[derive(Logger)]
+// #[crate_idx = 15]
+// #[module_idx = 255]
+// #[log_path = "rs_logger::test::path"]
+// pub enum MyLogger1 {
+//     Item1,
+//     Item2,
+//     Item3,
+// }
+
+// === Enum: Proper Values (TUPLE) === //
+// #[derive(Logger)]
+// #[crate_idx(13)]
+// #[module_idx(155)]
+// #[log_path("rs_logger::test::path")]
+// pub enum MyLogger2 {
+//     Item1,
+//     Item2,
+//     Item3,
+// }
+
+// === Enum: Proper Values (Combination) === //
+// #[derive(Logger)]
+// #[crate_idx = 4]
+// #[module_idx(4)]
+// #[log_path = "rs_logger::test::path"]
+// pub enum MyLogger3 {
+//     Item1,
+//     Item2,
+//     Item3,
+// }
+
+// --- Variant: --- //
 #[derive(Logger)]
 #[crate_idx = 15]
 #[module_idx = 255]
 #[log_path = "rs_logger::test::path"]
-pub enum MyLogger1 {
+pub enum _MyLogger {
     Item1,
-    Item2,
-    Item3,
+    Item2(String),
+    Item3 { a: usize, b: usize },
+    Item4(),
+    Item5 {},
 }
 
-// === Enum: Proper Values (TUPLE) === //
-#[derive(Logger)]
-#[crate_idx(13)]
-#[module_idx(155)]
-#[log_path("rs_logger::test::path")]
-pub enum MyLogger2 {
-    Item1,
-    Item2,
-    Item3,
-}
+// impl MyLogger {
+//     fn msg(&self) -> &str {
+//         match self {
+//             Self::Item1 => "item 1",
+//             Self::Item2(_) => "item 2",
+//             Self::Item3 { a: _, b: _ } => "item 3",
+//             Self::Item4() => "item 4",
+//             Self::Item5 {} => "item 5",
+//         }
+//     }
 
-// === Enum: Proper Values (Combination) === //
-#[derive(Logger)]
-#[crate_idx = 4]
-#[module_idx(4)]
-#[log_path = "rs_logger::test::path"]
-pub enum MyLogger3 {
-    Item1,
-    Item2,
-    Item3,
-}
+//     pub fn source(id: &str) -> Option<&str> {
+//         match id {
+//             "FOFOFOF" => Some("rs_logs::example"),
+//             _ => None,
+//         }
+//     }
+// }
