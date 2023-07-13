@@ -5,5 +5,6 @@ pub mod attributes;
 pub mod declaration_errors;
 pub mod value_errors;
 pub mod variant_errors;
+pub mod variant_msg_errors;
 
 pub type LoggerResult<T> = std::result::Result<T, venial::Error>;

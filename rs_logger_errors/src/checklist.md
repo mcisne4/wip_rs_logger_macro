@@ -14,9 +14,9 @@
 
 | Used | Error                  |
 | ---- | ---------------------- |
-| [ ]  | `has_declaration_attr` |
-| [ ]  | `missing_attr`         |
-| [ ]  | `multiple_attrs`       |
+| [x]  | `has_declaration_attr` |
+| [x]  | `missing_attr`         |
+| [x]  | `multiple_attrs`       |
 
 ## value_errors: enum
 
@@ -33,7 +33,7 @@
 
 | Used | Error             |
 | ---- | ----------------- |
-| [ ]  | `invalid_type`    |
-| [ ]  | `is_empty`        |
-| [ ]  | `multiple_values` |
-| [ ]  | `unparseable`     |
+| [x]  | `invalid_type`    |
+| [x]  | `is_empty`        |
+| [x]  | `multiple_values` |
+| [x]  | `unparseable`     |

@@ -155,16 +155,112 @@ use rs_logger::Logger;
 //     Item3,
 // }
 
-// --- Variant: --- //
+// --- Variant: No Attributes --- //
+// #[derive(Logger)]
+// #[crate_idx = 15]
+// #[module_idx = 255]
+// #[log_path = "rs_logger::test::path"]
+// pub enum _MyLogger {
+//     Item1,
+//     Item2(String),
+//     Item3 { a: usize, b: usize },
+//     Item4(),
+//     Item5 {},
+// }
+
+// --- Variant: Has Enum Declaration Attributes --- //
+// #[derive(Logger)]
+// #[crate_idx = 15]
+// #[module_idx = 255]
+// #[log_path = "rs_logger::test::path"]
+// pub enum _MyLogger {
+//     #[crate_idx]
+//     Item1,
+//     #[module_idx]
+//     Item2(String),
+//     #[log_path]
+//     Item3 { a: usize, b: usize },
+//     #[crate_idx]
+//     Item4(),
+//     #[module_idx]
+//     Item5 {},
+// }
+
+// --- Variant: Has Multiple Attributes --- //
+// #[derive(Logger)]
+// #[crate_idx = 15]
+// #[module_idx = 255]
+// #[log_path = "rs_logger::test::path"]
+// pub enum _MyLogger {
+//     #[info_msg]
+//     #[info_msg]
+//     Item1,
+//     #[info_msg]
+//     #[warn_msg]
+//     Item2(String),
+//     #[info_msg]
+//     #[error_msg]
+//     Item3 { a: usize, b: usize },
+//     #[info_msg]
+//     #[warn_msg]
+//     #[error_msg]
+//     Item4(),
+//     #[warn_msg]
+//     #[error_msg]
+//     Item5 {},
+// }
+
+// --- Variant: No Value --- //
+// #[derive(Logger)]
+// #[crate_idx = 15]
+// #[module_idx = 255]
+// #[log_path = "rs_logger::test::path"]
+// pub enum _MyLogger {
+//     #[info_msg]
+//     Item1,
+//     #[warn_msg]
+//     Item2(String),
+//     #[error_msg]
+//     Item3 { a: usize, b: usize },
+//     #[info_msg]
+//     Item4(),
+//     #[warn_msg]
+//     Item5 {},
+// }
+
+// --- Variant: Invalid Value Type --- //
+// #[derive(Logger)]
+// #[crate_idx = 15]
+// #[module_idx = 255]
+// #[log_path = "rs_logger::test::path"]
+// pub enum _MyLogger {
+//     #[info_msg = 23]
+//     Item1,
+//     #[warn_msg(false)]
+//     Item2(String),
+//     #[error_msg = true]
+//     Item3 { a: usize, b: usize },
+//     #[info_msg(a = 1, b = 2)]
+//     Item4(),
+//     #[warn_msg("Hello", "World")]
+//     Item5 {},
+// }
+
+// --- Variant: Invalid String --- //
 #[derive(Logger)]
 #[crate_idx = 15]
 #[module_idx = 255]
 #[log_path = "rs_logger::test::path"]
 pub enum _MyLogger {
+    #[info_msg = "Hello World {_0}"]
     Item1,
+    #[warn_msg("Hello {}}{")]
     Item2(String),
+    #[error_msg = "Hello {a} and {b}"]
     Item3 { a: usize, b: usize },
+    #[info_msg("Hello {{}}")]
     Item4(),
+    #[warn_msg("Hello {{World}}")]
     Item5 {},
 }
 

@@ -11,7 +11,7 @@ pub fn parse_enum_data(enum_ast: &venial::Enum) -> LoggerResult<()> {
         &enum_ast.variants,
         enum_data.id_prefix,
         enum_data.log_path,
-    );
+    )?;
 
     Ok(())
 }

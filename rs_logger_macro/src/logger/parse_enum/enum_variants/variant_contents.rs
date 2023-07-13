@@ -11,7 +11,7 @@ use rs_logger_errors::LoggerResult;
 // }
 
 pub fn parse(contents: &venial::StructFields) -> LoggerResult<()> {
-    eprintln!("{:#?}", contents);
+    // eprintln!("{:#?}", contents);
 
     match &contents {
         venial::StructFields::Unit => (),
